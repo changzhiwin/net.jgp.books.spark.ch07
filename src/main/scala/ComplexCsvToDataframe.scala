@@ -9,8 +9,6 @@ object ComplexCsvToDataframe extends Basic {
 
   def run(mode: String): Unit = {
 
-    println(s"------       Mode = $mode       ------")
-
     val schema = mode match {
       case "DDL" => formSchemaByDDL()
       case _     => formSchemaByStruct()
